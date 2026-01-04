@@ -1,24 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import layoutDefault from "@/layouts/default.vue";
+import user from '@/router/auth'
+import welcome from './welcome';
 
-//layout por default si no tiene asignado un meta
-import layoutDefault from "../layouts/default.vue"
-// importacion de archivo de rutas comunes
-import common from './common'
-// importacion de rutas del usuario
-import user from './user'
-//rutas del usuario auth
-import auth from './auth'
+let routes = [...user, ...welcome];
 
-// Crear un arreglo con todas las rutas
-let routes = [
-  ...common,
-  ...user,
-  ...auth
-]
-
-//asigna un layout por defecto a la ruta que no tenga meta
 routes =  routes.map((route)=>{
-  //condicion if para validar si el layout tiene meta
   if(!route.meta?.layout){
     route.meta = Object.assign({}, route.meta, { layout: layoutDefault})
   }

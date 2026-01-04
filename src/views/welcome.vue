@@ -1,6 +1,6 @@
 <template>
-    <div class="text-dark flex flex-col min-h-screen bg-[#f0f3f9]">
-        <slot />
+    <div class="relative top-14 min-h-[calc(100vh-56px)]">
+        welcome
     </div>
 </template>
 

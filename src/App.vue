@@ -1,13 +1,8 @@
 <template>
-  <component :is="$route.meta.layout ? $route.meta.layout: 'div'"/>    
+  <component :is="$route.meta.layout || 'div'">
+    <router-view />
+  </component>
 </template>
+<script setup></script>
 
-<script>
-  export default {
-    
-  }
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+<style scoped></style>

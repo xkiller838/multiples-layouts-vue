@@ -1,0 +1,86 @@
+  :root {
+            --tw-shadow-light: #ffffff;
+            --tw-shadow-dark: #d1d9e6;
+        }
+        
+        /* Estilos específicos para efectos neomórficos MÁS NOTORIOS */
+        .option-card {
+            aspect-ratio: 1/1;
+        }
+        
+        /* Efecto shine más intenso y notorio */
+        .option-card:hover::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0.15) 0%,
+                rgba(255, 255, 255, 0.05) 40%,
+                rgba(255, 255, 255, 0) 60%,
+                rgba(255, 255, 255, 0.15) 100%
+            );
+            transform: rotate(30deg);
+            animation: shine 1.8s infinite;
+            z-index: 1;
+        }
+        
+        /* Gradientes específicos para iconos en hover - más intensos */
+        .hover\:gradient-1:hover i {
+            background: linear-gradient(135deg, #4A6FFF, #2A4FCC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 4px rgba(74, 111, 255, 0.3));
+        }
+        
+        .hover\:gradient-2:hover i {
+            background: linear-gradient(135deg, #FF6B8B, #FF4161);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 4px rgba(255, 107, 139, 0.3));
+        }
+        
+        .hover\:gradient-3:hover i {
+            background: linear-gradient(135deg, #00D4AA, #00AA88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 4px rgba(0, 212, 170, 0.3));
+        }
+        
+        .hover\:gradient-4:hover i {
+            background: linear-gradient(135deg, #FF9A3C, #FF7A1C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 4px rgba(255, 154, 60, 0.3));
+        }
+        
+        .hover\:gradient-5:hover i {
+            background: linear-gradient(135deg, #9D50BB, #7D30AA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 4px rgba(157, 80, 187, 0.3));
+        }
+        
+        /* Animaciones personalizadas para cards */
+        .card-delay-1 { animation-delay: 0.05s; }
+        .card-delay-2 { animation-delay: 0.08s; }
+        .card-delay-3 { animation-delay: 0.11s; }
+        .card-delay-4 { animation-delay: 0.14s; }
+        .card-delay-5 { animation-delay: 0.17s; }
+        
+        /* Efecto de elevación más pronunciado */
+        .option-card {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .option-card:hover {
+            transform: translateY(-6px) scale(1.05);
+        }

@@ -1,22 +1,12 @@
 <template>
-  <div class="container:none h-screen">
-    <Header />
-    <div class="bg-red-200">
-      <router-view />
+    <Header/>
+    <div class="text-dark flex flex-col min-h-screen bg-[#f0f3f9]">
+        <slot />
     </div>
-    <Footer />
-  </div>
 </template>
 
-<script>
-import Header from "../components/header/welcome.vue";
-import Footer from "../components/footer/welcome.vue";
-export default {
-  components: {
-    Header,
-    Footer,
-  },
-};
+<script setup>
+import Header from '@/components/header.vue'
 </script>
 
 <style lang="scss" scoped></style>

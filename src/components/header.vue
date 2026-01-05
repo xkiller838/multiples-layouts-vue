@@ -51,6 +51,7 @@ const router = useRouter();
 const mobileMenuOpen = ref(false)
 
 const qrOptions = [
+    { title: 'Profile', href: "/profile", icon: 'fas fa-user-circle' },
     { title: 'Login', href: "/login", icon: 'fas fa-sign-in-alt' },
     { title: 'Register', href: "/register", icon: 'fas fa-user-plus' },
     { title: 'Forgot Password', href: "/forgot-password", icon: 'fas fa-key' },

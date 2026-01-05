@@ -5,8 +5,8 @@
       <div class="px-8 py-4">
         <!-- Encabezado del Formulario -->
         <div class="text-center mb-4">
-          <div
-            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4 shadow-sm">
+          <div @click="$router.push('/')"
+            class="inline-flex items-center justify-center cursor-pointer w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4 shadow-md">
             <!-- Icono de hoja/usuario -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">

@@ -88,13 +88,13 @@
 
           <div class="grid grid-cols-2 gap-4">
             <button type="button"
-              class="flex items-center cursor-pointer justify-center py-3 border border-green-300 rounded-lg bg-white hover:bg-green-50 transition-all duration-300 shadow-green hover:shadow-green-hover transform hover:-translate-y-0.5">
+              class="flex items-center cursor-pointer justify-center py-2 border border-green-300 rounded-lg bg-white hover:bg-green-50 transition-all duration-300 shadow-green hover:shadow-green-hover transform hover:-translate-y-0.5">
               <i class="fab fa-google text-green-500 mr-2"></i>
               <span class="text-gray-700 font-medium">Google</span>
             </button>
 
             <button type="button"
-              class="flex items-center cursor-pointer justify-center py-3 border border-green-300 rounded-lg bg-white hover:bg-green-50 transition-all duration-300 shadow-green hover:shadow-green-hover transform hover:-translate-y-0.5">
+              class="flex items-center cursor-pointer justify-center py-2 border border-green-300 rounded-lg bg-white hover:bg-green-50 transition-all duration-300 shadow-green hover:shadow-green-hover transform hover:-translate-y-0.5">
               <i class="fab fa-facebook text-green-500 mr-2"></i>
               <span class="text-gray-700 font-medium">Facebook</span>
             </button>

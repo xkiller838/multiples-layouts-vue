@@ -51,8 +51,11 @@ const router = useRouter();
 const mobileMenuOpen = ref(false)
 
 const qrOptions = [
-    { title: 'Login', href: "/login", icon: 'fas fa-lock' },
-    { title: 'Register', href: "/register", icon: 'fas fa-user' },
+    { title: 'Login', href: "/login", icon: 'fas fa-sign-in-alt' },
+    { title: 'Register', href: "/register", icon: 'fas fa-user-plus' },
+    { title: 'Forgot Password', href: "/forgot-password", icon: 'fas fa-key' },
+    { title: 'Reset Password', href: "/reset-password", icon: 'fas fa-lock' },
+    { title: 'Confirm Password', href: "/confirm-password", icon: 'fas fa-check-circle' },
 ];
 
 // Toggle menú móvil

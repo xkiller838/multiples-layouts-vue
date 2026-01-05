@@ -16,4 +16,28 @@ export default [
         layout: layoutAuth
       }
     },
+    {
+      path: '/forgot-password',
+      name: 'ForgotPassword',
+      component: () => import('@/views/auth/forgot-password.vue'),
+      meta: {
+        layout: layoutAuth
+      }
+    },
+    {
+      path: '/reset-password',
+      name: 'ResetPassword',
+      component: () => import('@/views/auth/reset-password.vue'),
+      meta: {
+        layout: layoutAuth
+      }
+    },
+    {
+      path: '/confirm-password',
+      name: 'ConfirmPassword',
+      component: () => import('@/views/auth/confirm-password.vue'),
+      meta: {
+        layout: layoutAuth
+      }
+    },
 ]

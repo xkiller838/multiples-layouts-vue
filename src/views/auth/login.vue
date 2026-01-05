@@ -1,20 +1,20 @@
 <template>
-  <div class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+  <div class="bg-gray-100 min-h-screen flex flex-col items-center justify-center px-4 py-8">
 
     <div class="w-full max-w-md bg-white rounded-2xl shadow-soft-green overflow-hidden z-10">
-      <div class="px-8 py-4">
+      <div class="px-6 sm:px-8 py-6 sm:py-8">
         <!-- Encabezado del Formulario -->
-        <div class="text-center mb-4">
+        <div class="text-center mb-6">
           <div @click="$router.push('/')"
-            class="inline-flex items-center justify-center cursor-pointer w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4 shadow-md">
+            class="inline-flex items-center justify-center cursor-pointer w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-100 text-green-600 mb-4 shadow-md hover:shadow-lg transition-all duration-300">
             <!-- Icono de hoja/usuario -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </div>
-          <h2 class="text-2xl font-bold text-gray-800">¡Bienvenido de nuevo!</h2>
+          <h2 class="text-xl sm:text-2xl font-bold text-gray-800">¡Bienvenido de nuevo!</h2>
         </div>
 
         <form id="loginForm" class="space-y-5">
@@ -49,7 +49,7 @@
             </div>
           </div>
 
-          <div class="flex items-center justify-between">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0">
             <div class="flex items-center">
               <input type="checkbox" id="remember"
                 class="h-4 w-4 text-green-500 focus:ring-green-400 border-gray-300 rounded">
@@ -68,7 +68,7 @@
           </button>
 
           <div class="text-center mt-2">
-            <p class="text-gray-600">
+            <p class="text-sm sm:text-base text-gray-600">
               ¿No tienes una cuenta?
               <a href="#"
                 class="font-medium text-green-600 hover:text-green-800 hover:underline ml-1 transition duration-300">

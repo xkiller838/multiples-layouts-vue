@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 dark:bg-gray-950 min-h-screen flex flex-col items-center justify-center px-4 py-8">
+  <div class="bg-gray-100 dark:bg-gray-800 min-h-screen flex flex-col items-center justify-center px-4 py-8">
 
     <div class="w-full max-w-lg bg-white dark:bg-gray-900 rounded-2xl shadow-soft-green border border-transparent dark:border-gray-800 overflow-hidden z-10 transition-colors duration-300">
       <div class="px-4 sm:px-8 py-4 sm:py-8">

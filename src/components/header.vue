@@ -15,6 +15,8 @@
 
                         <!-- Botón a la derecha -->
                         <div class="flex items-center space-x-3">
+                            <!-- Componente de tema -->
+                            <btnTheme/>
                             <!-- Botón menú -->
                             <button @click="toggleMobileMenu" class="w-10 h-10 cursor-pointer flex items-center justify-center rounded-lg backdrop-blur-sm bg-gray-200 dark:bg-gray-800 border border-white/30 dark:border-gray-700 text-black dark:text-white transition-colors">
                                 <i class="fas fa-bars"></i>
@@ -48,6 +50,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
+import btnTheme from './btnTheme.vue';
 
 const router = useRouter();
 const mobileMenuOpen = ref(false)

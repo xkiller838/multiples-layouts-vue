@@ -1,34 +1,37 @@
-// composables/useTheme.js
-import { ref, onMounted } from 'vue';
+// ../composables/useTheme.js
+import { ref, onMounted, watch } from 'vue';
 
 export function useTheme() {
   const isDark = ref(false);
 
-  // Función para aplicar la clase al HTML
-  const applyTheme = (dark) => {
-    if (dark) {
+  // 1. Inicializar al montar
+  onMounted(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Establecemos el valor inicial
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+      isDark.value = true;
+    } else {
+      isDark.value = false;
+    }
+  });
+
+  // 2. Esta función ahora SOLO cambia la variable reactive
+  const toggleTheme = () => {
+    isDark.value = !isDark.value;
+    // Nota: No llamamos a updateTheme aquí, el watch lo hará
+  };
+
+  // 3. El Watch vigila cambios en 'isDark' y ejecuta los efectos secundarios
+  watch(isDark, (newValue) => {
+    if (newValue) {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
-    isDark.value = dark;
-  };
-
-  // Alternar tema
-  const toggleTheme = () => {
-    const newTheme = !isDark.value;
-    applyTheme(newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
-  };
-
-  // Inicializar al cargar
-  onMounted(() => {
-    const userPreference = localStorage.getItem('theme');
-    const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Si hay preferencia guardada úsala, si no, usa la del sistema
-    const initDark = userPreference === 'dark' || (!userPreference && systemPreference);
-    applyTheme(initDark);
   });
 
   return { isDark, toggleTheme };

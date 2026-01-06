@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+/* En Tailwind 4, para activar el modo oscuro por clase manual 
+  en lugar de preferencia del sistema, usamos esta directiva:
+*/
+@variant dark (&:where(.dark, .dark *));
+

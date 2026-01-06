@@ -3,20 +3,20 @@
         <div class="relative">
             <!-- Barra de navegación principal -->
             <div
-                class="relative backdrop-blur-sm bg-white border-b border-white/10 shadow-[0_0.5vmin_1vmin_rgba(0,0,0,0.2)]">
+                class="relative backdrop-blur-sm dark:bg-gray-900/90 border-b border-white/10 shadow-[0_0.5vmin_1vmin_rgba(0,0,0,0.2)]">
                 <div class="container mx-auto px-4">
                     <div class="flex justify-between items-center h-14">
                         <!-- Logo o marca a la izquierda -->
                         <div class="flex items-center space-x-2">
-                            <div @click="$router.push('/')" class="w-8 h-8 cursor-pointer flex items-center justify-center rounded-full backdrop-blur-sm bg-gray-200 border border-white/30">
-                                <i class="fas fa-home text-black text-sm"></i>
+                            <div @click="$router.push('/')" class="w-8 h-8 cursor-pointer flex items-center justify-center rounded-full backdrop-blur-sm bg-gray-200 dark:bg-gray-800 border border-white/30 transition-colors">
+                                <i class="fas fa-home text-black dark:text-white text-sm"></i>
                             </div>
                         </div>
 
                         <!-- Botón a la derecha -->
                         <div class="flex items-center space-x-3">
                             <!-- Botón menú -->
-                            <button @click="toggleMobileMenu" class="w-10 h-10 cursor-pointer flex items-center justify-center rounded-lg backdrop-blur-sm bg-gray-200 border border-white/30 text-black">
+                            <button @click="toggleMobileMenu" class="w-10 h-10 cursor-pointer flex items-center justify-center rounded-lg backdrop-blur-sm bg-gray-200 dark:bg-gray-800 border border-white/30 dark:border-gray-700 text-black dark:text-white transition-colors">
                                 <i class="fas fa-bars"></i>
                             </button>
                         </div>
@@ -24,13 +24,15 @@
                 </div>
 
                 <!-- Menú desplegable -->
-                <div v-show="mobileMenuOpen" class="absolute top-full right-1.5 w-48 mt-2 rounded-2xl bg-white border-t border-gray-200 z-40 shadow-[0_0.5vmin_1vmin_rgba(0,0,0,0.2)]">
+                <div v-show="mobileMenuOpen" class="absolute top-full right-1.5 w-48 mt-2 rounded-2xl bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 z-40 shadow-lg transition-colors duration-300">
                     <div class="container mx-auto px-2 py-2">
                         <ul class="space-y-1">
                             <li v-for="option in qrOptions" :key="option.href">
                                 <a 
                                     @click="handleNavigate(option.href)"
-                                    class="block cursor-pointer text-[10px] xs:text-xs sm:text-sm px-2 py-2 text-gray-700 hover:bg-gray-200 rounded-lg transition-colors duration-200">
+                                    class="block cursor-pointer text-[10px] xs:text-xs sm:text-sm px-2 py-2 rounded-lg transition-colors duration-200
+                                          text-gray-700 hover:bg-gray-200 
+                                          dark:text-gray-200 dark:hover:bg-gray-700">
                                     <i :class="option.icon" class="mr-2"></i>
                                     {{ option.title }}
                                 </a>

@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-gray-100 min-h-screen flex flex-col items-center justify-center px-4 py-8">
+  <div class="bg-gray-100 dark:bg-gray-800 min-h-screen flex flex-col items-center justify-center px-4 py-8 transition-colors duration-300">
 
-    <div class="w-full max-w-md bg-white rounded-2xl shadow-soft-green overflow-hidden z-10">
+    <div class="w-full max-w-md bg-white dark:bg-gray-900 rounded-2xl shadow-soft-green border border-transparent dark:border-gray-800 overflow-hidden z-10 transition-colors duration-300">
       <div class="px-6 sm:px-8 py-6 sm:py-8">
         <!-- Encabezado del Formulario -->
         <div class="text-center mb-6">
           <div @click="$router.push('/')"
-            class="inline-flex items-center justify-center cursor-pointer w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-100 text-green-600 mb-4 shadow-md hover:shadow-lg transition-all duration-300">
+            class="inline-flex items-center justify-center cursor-pointer w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 mb-4 shadow-md hover:shadow-lg transition-all duration-300">
             <!-- Icono de hoja/usuario -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -14,12 +14,12 @@
                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-800">¡Bienvenido de nuevo!</h2>
+          <h2 class="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">¡Bienvenido de nuevo!</h2>
         </div>
 
         <form id="loginForm" class="space-y-5">
           <div class="space-y-2">
-            <label for="email" class="text-sm font-medium text-gray-600 ml-1">Correo Electrónico</label>
+            <label for="email" class="text-sm font-medium text-gray-600 dark:text-gray-400 ml-1">Correo Electrónico</label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-green-500">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -29,19 +29,19 @@
                 </svg>
               </span>
               <input type="email" id="email"
-                class="input-field w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-700 transition-all duration-300 placeholder-gray-400"
+                class="input-field w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 transition-all duration-300 placeholder-gray-400"
                 placeholder="ejemplo@correo.com" required>
             </div>
           </div>
 
           <div>
-            <label for="password" class="block text-gray-600 font-medium mb-2">Contraseña</label>
+            <label for="password" class="block text-gray-600 dark:text-gray-400 font-medium mb-2">Contraseña</label>
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <i class="fas fa-lock text-green-500"></i>
               </div>
               <input type="password" id="password"
-                class="input-field w-full pl-10 pr-12 py-3 border border-gray-200 bg-gray-50 rounded-lg input-focus focus:outline-none transition duration-300"
+                class="input-field w-full pl-10 pr-12 py-3 border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 rounded-lg text-gray-700 dark:text-gray-200 input-focus focus:outline-none transition duration-300"
                 placeholder="••••••••" required>
               <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3 flex items-center">
                 <i class="fas fa-eye text-gray-400 hover:text-green-500"></i>
@@ -52,12 +52,12 @@
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0">
             <div class="flex items-center">
               <input type="checkbox" id="remember"
-                class="h-4 w-4 text-green-500 focus:ring-green-400 border-gray-300 rounded">
-              <label for="remember" class="ml-2 block text-sm text-gray-700">Recordar sesión</label>
+                class="h-4 w-4 text-green-500 focus:ring-green-400 border-gray-300 dark:border-gray-700 rounded">
+              <label for="remember" class="ml-2 block text-sm text-gray-700 dark:text-gray-400">Recordar sesión</label>
             </div>
 
             <a href="#"
-              class="text-sm font-medium text-green-600 hover:text-green-800 hover:underline transition duration-300">
+              class="text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-800 hover:underline transition duration-300">
               ¿Olvidaste tu contraseña?
             </a>
           </div>
@@ -68,10 +68,10 @@
           </button>
 
           <div class="text-center mt-2">
-            <p class="text-sm sm:text-base text-gray-600">
+            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400">
               ¿No tienes una cuenta?
               <a href="#"
-                class="font-medium text-green-600 hover:text-green-800 hover:underline ml-1 transition duration-300">
+                class="font-medium text-green-600 dark:text-green-400 hover:text-green-800 hover:underline ml-1 transition duration-300">
                 Regístrate aquí
               </a>
             </p>
@@ -79,24 +79,24 @@
 
           <div class="relative my-3">
             <div class="absolute inset-0 flex items-center">
-              <div class="w-full border-t border-gray-300"></div>
+              <div class="w-full border-t border-gray-300 dark:border-gray-700"></div>
             </div>
             <div class="relative flex justify-center text-sm">
-              <span class="px-4 bg-white text-gray-500">O continúa con</span>
+              <span class="px-4 bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-400">O continúa con</span>
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <button type="button"
-              class="flex items-center cursor-pointer justify-center py-2 border border-green-300 rounded-lg bg-white hover:bg-green-50 transition-all duration-300 shadow-green hover:shadow-green-hover transform hover:-translate-y-0.5">
+              class="flex items-center cursor-pointer justify-center py-2 border border-green-300 dark:border-green-800 rounded-lg bg-white dark:bg-gray-800 hover:bg-green-50 dark:hover:bg-gray-700 transition-all duration-300">
               <i class="fab fa-google text-green-500 mr-2"></i>
-              <span class="text-gray-700 font-medium">Google</span>
+              <span class="text-gray-700 dark:text-gray-300 font-medium">Google</span>
             </button>
 
             <button type="button"
-              class="flex items-center cursor-pointer justify-center py-2 border border-green-300 rounded-lg bg-white hover:bg-green-50 transition-all duration-300 shadow-green hover:shadow-green-hover transform hover:-translate-y-0.5">
+              class="flex items-center cursor-pointer justify-center py-2 border border-green-300 dark:border-green-800 rounded-lg bg-white dark:bg-gray-800 hover:bg-green-50 dark:hover:bg-gray-700 transition-all duration-300">
               <i class="fab fa-facebook text-green-500 mr-2"></i>
-              <span class="text-gray-700 font-medium">Facebook</span>
+              <span class="text-gray-700 dark:text-gray-300 font-medium">Facebook</span>
             </button>
           </div>
         </form>

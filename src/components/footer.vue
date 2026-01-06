@@ -19,7 +19,7 @@
 
                         <!-- Lado derecho - Botón Acerca de RESPONSIVE -->
                         <div class="flex-shrink-0 ml-2">
-                            <button
+                            <button @click="modalStore.openAboutModal"
                                 class="relative animate-bounce backdrop-blur-sm 
                                            bg-white/25 dark:bg-gray-700/50 
                                            border border-gray-300 dark:border-gray-600 
@@ -41,7 +41,9 @@
 </template>
 
 <script setup>
+import { useModalStore } from '@/stores/modalStore'
 
+const modalStore = useModalStore()
 </script>
 
 <style lang="scss" scoped></style>
